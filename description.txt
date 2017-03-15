@@ -3,6 +3,7 @@ HUD Plus uses HUDLib to create a more intuitive set of HUDs for players. This mo
 Features
 - Item description and itemstring is displayed when selected in hotbar
 - Displays tool information in bottom-left when selected in hotbar
+- Clock to display time
 
 Forum: https://forum.minetest.net/viewtopic.php?f=9&t=16864&p=257211#p257211
 GitHub: https://github.com/octacian/hudplus

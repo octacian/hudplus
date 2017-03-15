@@ -13,13 +13,13 @@ HUD Plus uses HUDLib to create a more intuitive set of HUDs for players. This mo
 ### Features
 - Item description and itemstring is displayed when selected in hotbar
 - Displays tool information in bottom-left when selected in hotbar
+- Clock to display time
 
 ### Planned
 - Replace default Health Statbar
 - Waypoints
 - Hunger Statbar
 - Armor Statbar
-- Clock to display time
 
 ### Download
 [Master](https://github.com/octacian/hudplus/archive/master.zip) (latest, stable)<br>
