@@ -1,16 +1,8 @@
-This mod aims to create a better player HUD at the same time providing an extensive yet simplified API for modders (see API.md). Though this mod is small at the time, it can be expected to grow with new features including (but not limited to) hunger and armor statbars.
+HUD Plus uses HUDLib to create a more intuitive set of HUDs for players. This mod is currently small, but it has the potential to become huge considering the simplicity and expandability of the HUDLib API. The mod will soon include hunger, armor, and improved health statbars. See below for more information on current and planned features. If you don't want any of the features offered by this mod, you can disable them by disabling the respective module. For example, to prevent HUD Plus from displaying information about the tool you are holding, simply add `tool_info = false` on a new line in modules.conf.
 
 Features
 - Item description and itemstring is displayed when selected in hotbar
 - Displays tool information in bottom-left when selected in hotbar
-
-Planned
-- Hunger Statbar
-- Armor Statbar
-- Clock to display time
-- API to allow easy registration of features that can be changed per-player, per-HUD with a single chatcommand
-- API to register HUDs displayed to all players
-- Statbar API
 
 Forum: https://forum.minetest.net/viewtopic.php?f=9&t=16864&p=257211#p257211
 GitHub: https://github.com/octacian/hudplus
