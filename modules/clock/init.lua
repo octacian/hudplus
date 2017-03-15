@@ -23,7 +23,7 @@ hudlib.register("clock", {
   number = 0xFFFFFF ,
   text = get_time(),
 
-  do_every = { time = "second", func = function(name)
+  do_every = { time = 1, func = function(name)
     hudlib.hud_change(name, "clock", "text", get_time())
   end, }
 })
