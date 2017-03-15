@@ -17,7 +17,6 @@ HUD Plus uses HUDLib to create a more intuitive set of HUDs for players. This mo
 
 ### Planned
 - Replace default Health Statbar
-- Waypoints
 - Hunger Statbar
 - Armor Statbar
 
