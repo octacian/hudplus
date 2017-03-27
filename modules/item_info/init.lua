@@ -13,8 +13,8 @@ hudlib.register("item_info", {
   text = "",
   hide_after = after,
 
-  on_step = function(player, dtime)
-    local pname  = player:get_player_name()
+  on_step = function(pname, dtime)
+    local player = minetest.get_player_by_name(pname)
     local wstack = player:get_wielded_item()
     local windex = player:get_wield_index()
 
