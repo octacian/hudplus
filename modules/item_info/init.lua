@@ -9,11 +9,11 @@ hudlib.register("item_info", {
   pos = {x=0.5, y=1},
   offset = {x=0, y=-80},
   alignment = {x=0, y=0},
-  number = 0xFFFFFF ,
+  colour = 0xFFFFFF ,
   text = "",
   hide_after = after,
 
-  on_step = function(pname, dtime)
+  on_step = function(self, pname, dtime)
     local player = minetest.get_player_by_name(pname)
     local wstack = player:get_wielded_item()
     local windex = player:get_wield_index()
@@ -27,16 +27,16 @@ hudlib.register("item_info", {
     local itemstring = " ("..wstack:get_name()..")"
     if wstack:get_name() == "" then itemstring = "" end
 
-    hudlib.hud_change(player, "item_info", "text", desc..itemstring)
+    self:set_text(desc..itemstring)
 
     if wield[pname] ~= windex then
-			local show = hudlib.hud_get(player, "item_info", "show")
+			local show = hudlib.get(player, "item_info", "show")
 		  if show == false then
-		    hudlib.hud_show(player, "item_info")
+		    self:show()
 		  end
 
 		  -- Update timer
-		  hudlib.after("hide_item_info", after, function() hudlib.hud_hide(player, "item_info") end)
+		  hudlib.after("hide_item_info", after, function() self:hide() end)
 		end
 
     wield[pname] = windex

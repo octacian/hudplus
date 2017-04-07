@@ -8,10 +8,10 @@ hudlib.register("tool_info", {
   pos = {x=0, y=1},
   offset = {x=70, y=-50},
   direction = 0,
-  number = 0xFFFFFF ,
+  colour = 0xFFFFFF ,
   text = "",
 
-  on_step = function(pname, dtime)
+  on_step = function(self, pname, dtime)
     local player = minetest.get_player_by_name(pname)
     local wstack = player:get_wielded_item()
     local windex = player:get_wield_index()
@@ -32,18 +32,17 @@ hudlib.register("tool_info", {
       local speed  = def.tool_capabilities.full_punch_interval or 1
       local drop   = def.tool_capabilities.max_drop_level or 0
 
-      hudlib.hud_change(player, "tool_info", "text", desc.."\nWear: "..
-        wear.."/100\nDamage: "..damage.."\nSpeed: "..
-          speed.."\nMax Drop Level: "..drop)
+      self:set_text(desc.."\nWear: "..wear.."/100\nDamage: "..damage
+        .."\nSpeed: "..speed.."\nMax Drop Level: "..drop)
 
       if wield[pname] ~= windex then
-      	local show = hudlib.hud_get(player, "tool_info", "show")
+      	local show = hudlib.get(player, "tool_info", "show")
         if show == false then
-          hudlib.hud_show(player, "tool_info")
+          self:show()
         end
       end
     else
-      hudlib.hud_hide(player, "tool_info")
+      self:hide()
     end
 
     wield[pname] = windex

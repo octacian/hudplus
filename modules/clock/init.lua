@@ -20,10 +20,10 @@ hudlib.register("clock", {
   type = "text",
   pos = {x=0.5, y=0},
   offset = {x=0, y=10},
-  number = 0xFFFFFF ,
+  colour = 0xFFFFFF ,
   text = get_time(),
 
-  do_every = { time = 1, func = function(name)
-    hudlib.hud_change(name, "clock", "text", get_time())
+  do_every = { time = 1, func = function(self, name)
+    self:set_text(get_time())
   end, }
 })
